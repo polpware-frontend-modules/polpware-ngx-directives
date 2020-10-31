@@ -27,8 +27,8 @@ class RestWindowHeightDirective {
     computeHeight() {
         const nativeElement = this.el.nativeElement;
         // Case 1: fixed Height 
-        if (this.maxHeight) {
-            this.el.nativeElement.style.height = this.maxHeight + 'px';
+        if (this.fixedHeight) {
+            this.el.nativeElement.style.height = this.fixedHeight + 'px';
             return;
         }
         const bodyRect = document.body.getBoundingClientRect(), elemRect = nativeElement.getBoundingClientRect();
