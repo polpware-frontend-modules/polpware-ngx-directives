@@ -10,26 +10,43 @@ var RestWindowHeightDirective = /** @class */ (function () {
         this.el = el;
         this.bottomOffset = 0;
         this.minHeight = 0;
+        this.fixedHeight = 0;
+        this.maxHeight = 0;
+        this.topOffset = 0;
     }
     RestWindowHeightDirective.prototype.ngAfterViewInit = function () {
-        this.computeHeight();
+        var _this = this;
+        setTimeout(function () {
+            _this.computeHeight();
+        });
     };
     RestWindowHeightDirective.prototype.onResize = function (event) {
-        this.computeHeight();
+        var _this = this;
+        setTimeout(function () {
+            _this.computeHeight();
+        });
     };
     RestWindowHeightDirective.prototype.computeHeight = function () {
         var nativeElement = this.el.nativeElement;
+        // Case 1: fixed Height 
+        if (this.maxHeight) {
+            this.el.nativeElement.style.height = this.maxHeight + 'px';
+            return;
+        }
         var bodyRect = document.body.getBoundingClientRect(), elemRect = nativeElement.getBoundingClientRect();
         var offset = elemRect.top - bodyRect.top;
         var screenHeight = window.innerHeight;
-        var height = screenHeight - offset - this.bottomOffset;
+        var height = screenHeight - offset - this.bottomOffset - this.topOffset;
         height = (height > this.minHeight) ? height : this.minHeight;
+        if (this.maxHeight) {
+            height = (height > this.maxHeight) ? this.maxHeight : height;
+        }
         this.el.nativeElement.style.height = height + 'px';
     };
     RestWindowHeightDirective.ɵfac = function RestWindowHeightDirective_Factory(t) { return new (t || RestWindowHeightDirective)(ɵɵdirectiveInject(ElementRef)); };
     RestWindowHeightDirective.ɵdir = ɵɵdefineDirective({ type: RestWindowHeightDirective, selectors: [["", "polpRestWindowHeight", ""]], hostBindings: function RestWindowHeightDirective_HostBindings(rf, ctx) { if (rf & 1) {
             ɵɵlistener("resize", function RestWindowHeightDirective_resize_HostBindingHandler($event) { return ctx.onResize($event); }, false, ɵɵresolveWindow);
-        } }, inputs: { bottomOffset: "bottomOffset", minHeight: "minHeight" } });
+        } }, inputs: { bottomOffset: "bottomOffset", minHeight: "minHeight", fixedHeight: "fixedHeight", maxHeight: "maxHeight", topOffset: "topOffset" } });
     return RestWindowHeightDirective;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(RestWindowHeightDirective, [{
@@ -40,6 +57,12 @@ var RestWindowHeightDirective = /** @class */ (function () {
     }], function () { return [{ type: ElementRef }]; }, { bottomOffset: [{
             type: Input
         }], minHeight: [{
+            type: Input
+        }], fixedHeight: [{
+            type: Input
+        }], maxHeight: [{
+            type: Input
+        }], topOffset: [{
             type: Input
         }], onResize: [{
             type: HostListener,
