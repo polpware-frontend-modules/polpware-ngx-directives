@@ -12,10 +12,11 @@ export declare class RestWindowHeightDirective implements AfterViewInit {
     fixedHeight: number;
     maxHeight: number;
     topOffset: number;
+    containerClass: string;
     constructor(el: ElementRef);
     ngAfterViewInit(): void;
     onResize(event: any): void;
     private computeHeight;
     static ɵfac: i0.ɵɵFactoryDef<RestWindowHeightDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDefWithMeta<RestWindowHeightDirective, "[polpRestWindowHeight]", never, { "bottomOffset": "bottomOffset"; "minHeight": "minHeight"; "fixedHeight": "fixedHeight"; "maxHeight": "maxHeight"; "topOffset": "topOffset"; }, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<RestWindowHeightDirective, "[polpRestWindowHeight]", never, { "bottomOffset": "bottomOffset"; "minHeight": "minHeight"; "fixedHeight": "fixedHeight"; "maxHeight": "maxHeight"; "topOffset": "topOffset"; "containerClass": "containerClass"; }, {}, never>;
 }

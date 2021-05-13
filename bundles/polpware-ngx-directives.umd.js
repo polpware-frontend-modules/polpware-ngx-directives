@@ -4,6 +4,15 @@
     (global = global || self, factory((global.polpware = global.polpware || {}, global.polpware['ngx-directives'] = {}), global.ng.core));
 }(this, (function (exports, core) { 'use strict';
 
+    function findAncestorByClass(el, cls) {
+        while (el.parentElement) {
+            el = el.parentElement;
+            if (el.classList.contains(cls)) {
+                break;
+            }
+        }
+        return el;
+    }
     /**
      * Defines a directive for setting the height of the element in question according
      * to a formula.
@@ -17,6 +26,7 @@
             this.fixedHeight = 0;
             this.maxHeight = 0;
             this.topOffset = 0;
+            this.containerClass = '';
         }
         RestWindowHeightDirective.prototype.ngAfterViewInit = function () {
             var _this = this;
@@ -37,7 +47,15 @@
                 this.el.nativeElement.style.height = this.fixedHeight + 'px';
                 return;
             }
-            var bodyRect = document.body.getBoundingClientRect(), elemRect = nativeElement.getBoundingClientRect();
+            var bodyRect;
+            if (this.containerClass) {
+                var p = findAncestorByClass(nativeElement, this.containerClass);
+                bodyRect = p.getBoundingClientRect();
+            }
+            else {
+                bodyRect = document.body.getBoundingClientRect();
+            }
+            var elemRect = nativeElement.getBoundingClientRect();
             var offset = elemRect.top - bodyRect.top;
             var screenHeight = window.innerHeight;
             var height = screenHeight - offset - this.bottomOffset - this.topOffset;
@@ -50,7 +68,7 @@
         RestWindowHeightDirective.ɵfac = function RestWindowHeightDirective_Factory(t) { return new (t || RestWindowHeightDirective)(core.ɵɵdirectiveInject(core.ElementRef)); };
         RestWindowHeightDirective.ɵdir = core.ɵɵdefineDirective({ type: RestWindowHeightDirective, selectors: [["", "polpRestWindowHeight", ""]], hostBindings: function RestWindowHeightDirective_HostBindings(rf, ctx) { if (rf & 1) {
                 core.ɵɵlistener("resize", function RestWindowHeightDirective_resize_HostBindingHandler($event) { return ctx.onResize($event); }, false, core.ɵɵresolveWindow);
-            } }, inputs: { bottomOffset: "bottomOffset", minHeight: "minHeight", fixedHeight: "fixedHeight", maxHeight: "maxHeight", topOffset: "topOffset" } });
+            } }, inputs: { bottomOffset: "bottomOffset", minHeight: "minHeight", fixedHeight: "fixedHeight", maxHeight: "maxHeight", topOffset: "topOffset", containerClass: "containerClass" } });
         return RestWindowHeightDirective;
     }());
     /*@__PURE__*/ (function () { core.ɵsetClassMetadata(RestWindowHeightDirective, [{
@@ -67,6 +85,8 @@
             }], maxHeight: [{
                 type: core.Input
             }], topOffset: [{
+                type: core.Input
+            }], containerClass: [{
                 type: core.Input
             }], onResize: [{
                 type: core.HostListener,
