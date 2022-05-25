@@ -1,23 +1,34 @@
 {
   "name": "@polpware/ngx-directives",
-  "version": "9.1.0",
+  "version": "13.0.0",
   "peerDependencies": {
-    "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0"
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0"
   },
   "dependencies": {
-    "tslib": "^1.10.0"
+    "tslib": "^2.0.0"
   },
-  "main": "bundles/polpware-ngx-directives.umd.js",
-  "module": "fesm5/polpware-ngx-directives.js",
-  "es2015": "fesm2015/polpware-ngx-directives.js",
-  "esm5": "esm5/polpware-ngx-directives.js",
-  "esm2015": "esm2015/polpware-ngx-directives.js",
-  "fesm5": "fesm5/polpware-ngx-directives.js",
-  "fesm2015": "fesm2015/polpware-ngx-directives.js",
+  "module": "fesm2015/polpware-ngx-directives.mjs",
+  "es2020": "fesm2020/polpware-ngx-directives.mjs",
+  "esm2020": "esm2020/polpware-ngx-directives.mjs",
+  "fesm2020": "fesm2020/polpware-ngx-directives.mjs",
+  "fesm2015": "fesm2015/polpware-ngx-directives.mjs",
   "typings": "polpware-ngx-directives.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./polpware-ngx-directives.d.ts",
+      "esm2020": "./esm2020/polpware-ngx-directives.mjs",
+      "es2020": "./fesm2020/polpware-ngx-directives.mjs",
+      "es2015": "./fesm2015/polpware-ngx-directives.mjs",
+      "node": "./fesm2015/polpware-ngx-directives.mjs",
+      "default": "./fesm2020/polpware-ngx-directives.mjs"
+    }
+  },
   "sideEffects": false,
   "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
   }
 }

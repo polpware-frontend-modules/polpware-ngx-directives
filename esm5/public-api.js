@@ -1,6 +1,0 @@
-/*
- * Public API Surface of ngx-directives
- */
-export * from './lib/rest-window-height/rest-window-height.directive';
-export * from './lib/ngx-directives.module';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0Bwb2xwd2FyZS9uZ3gtZGlyZWN0aXZlcy8iLCJzb3VyY2VzIjpbInB1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSCxjQUFjLHVEQUF1RCxDQUFDO0FBQ3RFLGNBQWMsNkJBQTZCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogUHVibGljIEFQSSBTdXJmYWNlIG9mIG5neC1kaXJlY3RpdmVzXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvcmVzdC13aW5kb3ctaGVpZ2h0L3Jlc3Qtd2luZG93LWhlaWdodC5kaXJlY3RpdmUnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LWRpcmVjdGl2ZXMubW9kdWxlJztcbiJdfQ==
