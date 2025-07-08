@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Directive, Input, HostListener, NgModule } from '@angular/core';
+import { Directive, HostListener, Input, NgModule } from '@angular/core';
 
 function findAncestorByClass(el, cls) {
     while (el.parentElement) {
@@ -65,12 +65,12 @@ class RestWindowHeightDirective {
             i0.ɵɵlistener("resize", function RestWindowHeightDirective_resize_HostBindingHandler($event) { return ctx.onResize($event); }, false, i0.ɵɵresolveWindow);
         } }, inputs: { bottomOffset: "bottomOffset", minHeight: "minHeight", fixedHeight: "fixedHeight", maxHeight: "maxHeight", topOffset: "topOffset", containerClass: "containerClass" } }); }
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RestWindowHeightDirective, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RestWindowHeightDirective, [{
         type: Directive,
         args: [{
                 selector: '[polpRestWindowHeight]'
             }]
-    }], function () { return [{ type: i0.ElementRef }]; }, { bottomOffset: [{
+    }], () => [{ type: i0.ElementRef }], { bottomOffset: [{
             type: Input
         }], minHeight: [{
             type: Input
@@ -92,7 +92,7 @@ class PolpNgxDirectivesModule {
     static { this.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: PolpNgxDirectivesModule }); }
     static { this.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({}); }
 }
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PolpNgxDirectivesModule, [{
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PolpNgxDirectivesModule, [{
         type: NgModule,
         args: [{
                 declarations: [
