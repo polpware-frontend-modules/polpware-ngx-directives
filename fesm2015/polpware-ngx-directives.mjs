@@ -95,7 +95,7 @@ class PolpNgxDirectivesModule {
 }
 PolpNgxDirectivesModule.ɵfac = function PolpNgxDirectivesModule_Factory(t) { return new (t || PolpNgxDirectivesModule)(); };
 PolpNgxDirectivesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: PolpNgxDirectivesModule });
-PolpNgxDirectivesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[]] });
+PolpNgxDirectivesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({});
 (function () {
     (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PolpNgxDirectivesModule, [{
             type: NgModule,
