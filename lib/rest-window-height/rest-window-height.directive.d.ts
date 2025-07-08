@@ -18,6 +18,6 @@ export declare class RestWindowHeightDirective implements AfterViewInit {
     onResize(event: any): void;
     private computeHeight;
     static ɵfac: i0.ɵɵFactoryDeclaration<RestWindowHeightDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<RestWindowHeightDirective, "[polpRestWindowHeight]", never, { "bottomOffset": "bottomOffset"; "minHeight": "minHeight"; "fixedHeight": "fixedHeight"; "maxHeight": "maxHeight"; "topOffset": "topOffset"; "containerClass": "containerClass"; }, {}, never, never, false>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<RestWindowHeightDirective, "[polpRestWindowHeight]", never, { "bottomOffset": "bottomOffset"; "minHeight": "minHeight"; "fixedHeight": "fixedHeight"; "maxHeight": "maxHeight"; "topOffset": "topOffset"; "containerClass": "containerClass"; }, {}, never, never, false, never>;
 }
 //# sourceMappingURL=rest-window-height.directive.d.ts.map
