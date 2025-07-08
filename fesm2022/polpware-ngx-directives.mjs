@@ -60,11 +60,11 @@ class RestWindowHeightDirective {
         }
         this.el.nativeElement.style.height = height + 'px';
     }
+    static { this.ɵfac = function RestWindowHeightDirective_Factory(t) { return new (t || RestWindowHeightDirective)(i0.ɵɵdirectiveInject(i0.ElementRef)); }; }
+    static { this.ɵdir = /*@__PURE__*/ i0.ɵɵdefineDirective({ type: RestWindowHeightDirective, selectors: [["", "polpRestWindowHeight", ""]], hostBindings: function RestWindowHeightDirective_HostBindings(rf, ctx) { if (rf & 1) {
+            i0.ɵɵlistener("resize", function RestWindowHeightDirective_resize_HostBindingHandler($event) { return ctx.onResize($event); }, false, i0.ɵɵresolveWindow);
+        } }, inputs: { bottomOffset: "bottomOffset", minHeight: "minHeight", fixedHeight: "fixedHeight", maxHeight: "maxHeight", topOffset: "topOffset", containerClass: "containerClass" } }); }
 }
-RestWindowHeightDirective.ɵfac = function RestWindowHeightDirective_Factory(t) { return new (t || RestWindowHeightDirective)(i0.ɵɵdirectiveInject(i0.ElementRef)); };
-RestWindowHeightDirective.ɵdir = /*@__PURE__*/ i0.ɵɵdefineDirective({ type: RestWindowHeightDirective, selectors: [["", "polpRestWindowHeight", ""]], hostBindings: function RestWindowHeightDirective_HostBindings(rf, ctx) { if (rf & 1) {
-        i0.ɵɵlistener("resize", function RestWindowHeightDirective_resize_HostBindingHandler($event) { return ctx.onResize($event); }, false, i0.ɵɵresolveWindow);
-    } }, inputs: { bottomOffset: "bottomOffset", minHeight: "minHeight", fixedHeight: "fixedHeight", maxHeight: "maxHeight", topOffset: "topOffset", containerClass: "containerClass" } });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RestWindowHeightDirective, [{
         type: Directive,
         args: [{
@@ -88,10 +88,10 @@ RestWindowHeightDirective.ɵdir = /*@__PURE__*/ i0.ɵɵdefineDirective({ type: R
         }] }); })();
 
 class PolpNgxDirectivesModule {
+    static { this.ɵfac = function PolpNgxDirectivesModule_Factory(t) { return new (t || PolpNgxDirectivesModule)(); }; }
+    static { this.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: PolpNgxDirectivesModule }); }
+    static { this.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({}); }
 }
-PolpNgxDirectivesModule.ɵfac = function PolpNgxDirectivesModule_Factory(t) { return new (t || PolpNgxDirectivesModule)(); };
-PolpNgxDirectivesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: PolpNgxDirectivesModule });
-PolpNgxDirectivesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({});
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PolpNgxDirectivesModule, [{
         type: NgModule,
         args: [{
