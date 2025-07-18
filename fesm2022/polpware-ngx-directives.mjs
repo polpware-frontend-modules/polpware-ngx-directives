@@ -63,12 +63,13 @@ class RestWindowHeightDirective {
     static { this.ɵfac = function RestWindowHeightDirective_Factory(__ngFactoryType__) { return new (__ngFactoryType__ || RestWindowHeightDirective)(i0.ɵɵdirectiveInject(i0.ElementRef)); }; }
     static { this.ɵdir = /*@__PURE__*/ i0.ɵɵdefineDirective({ type: RestWindowHeightDirective, selectors: [["", "polpRestWindowHeight", ""]], hostBindings: function RestWindowHeightDirective_HostBindings(rf, ctx) { if (rf & 1) {
             i0.ɵɵlistener("resize", function RestWindowHeightDirective_resize_HostBindingHandler($event) { return ctx.onResize($event); }, false, i0.ɵɵresolveWindow);
-        } }, inputs: { bottomOffset: "bottomOffset", minHeight: "minHeight", fixedHeight: "fixedHeight", maxHeight: "maxHeight", topOffset: "topOffset", containerClass: "containerClass" } }); }
+        } }, inputs: { bottomOffset: "bottomOffset", minHeight: "minHeight", fixedHeight: "fixedHeight", maxHeight: "maxHeight", topOffset: "topOffset", containerClass: "containerClass" }, standalone: false }); }
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RestWindowHeightDirective, [{
         type: Directive,
         args: [{
-                selector: '[polpRestWindowHeight]'
+                selector: '[polpRestWindowHeight]',
+                standalone: false
             }]
     }], () => [{ type: i0.ElementRef }], { bottomOffset: [{
             type: Input
